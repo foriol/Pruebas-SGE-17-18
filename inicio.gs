@@ -15,4 +15,5 @@ function menuItem1() {
   //Añado este nuevo comentario sobre el código desde Github!!!
   //Para usar el log de GAS solo tenemos que hacer CTRL+Enter y añadir esta linea
   Logger.log("Es una prueba de Log");
+  Logger.log("Esto es una prueba del nombre "+input);
 }
