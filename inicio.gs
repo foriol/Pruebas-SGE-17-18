@@ -5,6 +5,7 @@ function onOpen() {
   ui.createMenu('Actualizar datos')
       .addItem('Empezar ahora!!', 'menuItem1')
       .addItem('Función2', 'menuItem2')
+      .addItem('Funcion3', 'menuItem3')
       .addToUi();
   
 }
@@ -26,4 +27,11 @@ function menuItem2() {
   var name = SpreadsheetApp.getActive().getName();
   Logger.log("El nombre de la HCG es "+name);  
   //Mostramos la variable en el log.
+}
+
+//Esta función mostrará el nombre de la hoja de cálculo y además el nombre de otra HCG.
+function menuItem3() {
+  var name = SpreadsheetApp.getActive().getName();
+  var name2 = SpreadsheetApp.openById("1Asb6vLVk3jG5BO1tguCNC_Z8LwsshByJmAV8Psh9Euw").getName();
+  Logger.log("Tienes la HCG "+name+" y la HCG "+name2);
 }
