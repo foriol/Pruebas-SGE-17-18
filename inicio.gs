@@ -4,7 +4,9 @@ function onOpen() {
   // Or DocumentApp or FormApp. -> Creamos el menu con submenu
   ui.createMenu('Actualizar datos')
       .addItem('Empezar ahora!!', 'menuItem1')
+      .addItem('Función2', 'menuItem2')
       .addToUi();
+  
 }
 
 function menuItem1() {
@@ -16,4 +18,12 @@ function menuItem1() {
   //Para usar el log de GAS solo tenemos que hacer CTRL+Enter y añadir esta linea
   Logger.log("Es una prueba de Log");
   Logger.log("Esto es una prueba del nombre "+input);
+}
+
+//Esta función mostrará el nombre de la hoja de cálculo.
+function menuItem2() {
+  //Obtenemos en una variuable el nombre de la HCG.
+  var name = SpreadsheetApp.getActive().getName();
+  Logger.log("El nombre de la HCG es "+name);  
+  //Mostramos la variable en el log.
 }
